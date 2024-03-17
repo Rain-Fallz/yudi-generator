@@ -15,6 +15,17 @@ import java.io.IOException;
 public class MainGenerator {
 
     public static void main(String[] args) throws TemplateException, IOException {
+
+
+        MainTemplateDataModel dataModel = new MainTemplateDataModel();
+        dataModel.setAuthor("rainfall");
+        dataModel.setOutputText("The sum is");
+        dataModel.setLoop(false);
+
+        generateAll(dataModel);
+    }
+
+    public static void generateAll(MainTemplateDataModel dataModel) throws TemplateException, IOException {
         // 1.静态文件生成
         // 获取整个项目的根路径
         String projectPath = System.getProperty("user.dir");
@@ -25,13 +36,7 @@ public class MainGenerator {
 
         // 2.动态文件生成
         String dynamicInputPath = projectPath + File.separator + "yudi-generator-basic\\src\\main\\resources\\templates\\MainTemplate.java.ftl";
-        String dynamicOutputPath = projectPath + File.separator + "DynamicTemplate.java";
-
-        MainTemplateDataModel dataModel = new MainTemplateDataModel();
-        dataModel.setAuthor("rainfall");
-        dataModel.setOutputText("The sum is");
-        dataModel.setLoop(false);
-
+        String dynamicOutputPath = projectPath + File.separator + "acm-template" + File.separator + "DynamicTemplate.java";
         DynamicGenerator.doGenerate(dynamicInputPath, dynamicOutputPath, dataModel);
     }
 }

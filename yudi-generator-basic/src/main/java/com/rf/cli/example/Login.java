@@ -12,6 +12,7 @@ import java.util.concurrent.Callable;
  * @date 2024/3/17
  */
 class Login implements Callable<Integer> {
+
     @Option(names = {"-u", "--user"}, description = "User name")
     String user;
 
