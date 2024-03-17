@@ -21,7 +21,6 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.32</version>
         </dependency>
-
         <!--hutool工具类-->
         <dependency>
             <groupId>cn.hutool</groupId>
@@ -47,5 +46,23 @@
             <version>RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <!--本项目不一定用到，用于学习-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.46</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180813</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/info.picocli/picocli -->
+        <dependency>
+            <groupId>info.picocli</groupId>
+            <artifactId>picocli</artifactId>
+            <version>4.7.5</version>
+        </dependency>
+
     </dependencies>
 </project>
